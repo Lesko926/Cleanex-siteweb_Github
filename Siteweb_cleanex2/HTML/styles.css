@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap');
+/* Styles des divisions principales de la page */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*-- SLIDES--*/
+header{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+    background-size: cover;
+    height: 300px;
+    border-bottom: 2px solid;
+    background: url(../IMAGES/photo1.jpg);
+    background-size: cover;
+    animation: slide 30s infinite;
+}
+@keyframes slide {
+    25%{
+        background: url(../IMAGES/photo4.jpg);
+        background-size: cover;
+    }
+    50%{
+        background: url(../IMAGES/photo5.jpg);
+        background-size: cover;
+    }
+    75%{
+        background: url(../IMAGES/photo6.jpg);
+        background-size: cover;
+    }
+    100%{
+        background: url(../IMAGES/photo1.jpg);
+        background-size: cover;
+    }
+}
+
+
+header h1{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 40px;
+}
+header h4{
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+
+/**
+*flex-wrap pour la vue sur mobile
+*/
+nav{
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #6f6f6f;
+    /*position: fixed;*/
+}
+
+nav h1{
+    color: grey;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 30px;
+}
+
+nav .onglets{
+    margin-left: 30px;
+}
+nav .onglets  a{
+    text-decoration: none;
+    color: darkgray;
+    margin-right: 10px;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+nav .onglets  a:hover{
+    background-color: #54575B;
+    color: white;
+}
+nav li  a:hover{
+    background-color: #54575B;
+    color: white;
+    transform: translate(-5px);
+}
+
+nav li a{
+    display: block;
+}
+
+nav li{
+    display: inline-block;
+    position: relative;
+}
+/* ce qui va faire apparaitre le sous menu*/
+nav li:hover .sub-menu{
+    display: block;
+}
+nav .onglets2 a{
+    text-decoration: none;
+    color: darkgray;
+    margin-right: 10px;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+.sub-menu{
+    display: none;
+    position: absolute;
+    width: 200px;
+}
+
+.sub-menu li{
+    display: block;
+}
+
+
+
+
+
+
+/*-- CONTACT--*/
+#contact{
+    background-color: #f9f9fb;
+    padding: 100px 15px;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0px auto;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 50px 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 50px -10px #d6d6d6;
+}
+
+#contact .container .title {
+    text-align: center;
+    color: #2a2a2a;
+    margin-bottom: 60px;
+}
+
+#contact .container .title h6{
+    font-size: 1.2em;
+}
+#contact .container .title h3{
+    font-size: 2.8em;
+}
+
+#contact .container form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+}
+
+#contact .container form input{
+    width: 45%;
+}
+
+#contact .container form input:hover,
+#contact .container form textarea:hover
+{
+    border-bottom: 2px solid #1fb3bf;
+}
+
+#contact .container form input, 
+#contact .container form textarea{
+    margin: 15px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e4e4ec;
+    transition: 0.2s;
+}
+
+#contact .container form textarea{
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+#contact .container form button{
+    width: 192px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1fb3bf;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 30px;
+    outline: none;
+    margin: 0 auto;
+    transition: 0.2s;
+}
+
+#contact .container form button:hover{
+    transform: translateY(-5px);
+    box-shadow: rgb(214 214 214) 0px 10px 50px 0px;
+}
+
+@media screen and (max-width: 500px) {
+    #contact .container form {
+        flex-direction: column;
+        width: 95%;
+    }
+    #contact .container form input{
+        width: 100%;
+    }
+
+    #contact .container .title h6{
+        font-size: 1em;
+    }
+    #contact .container .title h3{
+        font-size: 2em;
+    }
+}
+
+/*-- DEVIS--*/
+#appointment{
+   background-color: #f9f9fb;
+   padding: 50px 0;
+}
+#appointment .devis{
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: white;
+    height: 540px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+}
+
+#appointment .devis .formulaire{
+    width: 55%;
+    margin-right: 35px;
+}
+
+#appointment .devis .formulaire form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#appointment .devis .formulaire h3{
+    font-size: 2em;
+    color: #2a2a2a;
+    margin-bottom: 50px;
+}
+
+#appointment .devis .formulaire input,
+#appointment .devis .formulaire textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e4e4ec;
+    transition: 0.2s;
+}
+
+#appointment .devis .formulaire input:hover,
+#appointment .devis .formulaire textarea
+ {
+    border-bottom: 2px solid #1fb3bf;
+}
+
+#appointment .devis .formulaire-image{
+    width: 40%;
+    height: 50%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9fb;
+}
+
+#appointment .devis .formulaire-image img{
+    width: 60%;
+
+    
+}
+
+#appointment .devis div img{
+    height: 150px;
+}
+
+#appointment .devis .formulaire input.nom-entreprise, 
+#appointment .devis .formulaire input.email,
+#appointment .devis .formulaire input.nettoyage
+{
+    width: 45%;
+}
+
+#appointment .devis .formulaire textarea.demande{
+    width: 100%;
+}
+
+
+#appointment .devis .formulaire input.numero-tel, 
+#appointment .devis .formulaire input.date,
+#appointment .devis .formulaire input.horaire,
+#appointment .devis .formulaire input.adresse
+{
+    width: 28%;
+}
+
+#appointment .devis .formulaire button.submit-btn{
+    width: 192px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1fb3bf;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    outline: none;
+}
+
+
+.main{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.main .content .card img{
+    height: 400px;
+    width: 250px;
+}
+
+.main .content .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.main2{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    background-color: darkgray;
+}
+.main2 .content2 .card2 .left img{
+    height: 200px;
+    width: 200px;
+    margin-top: 40px;
+}
+.main2 .content2 .card2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+footer{
+    margin-top: 40px;
+    border-top: 5px solid #6f6f6f;
+    background-color: black;
+    color: white;
+    padding: 30px 100px;
+}
+footer h1{
+    font-family: 'Playfair Display', sans-serif;
+    border-bottom: 1px solid #fff;
+    width: 20%;
+    padding-bottom: 5px;
+}
+
+footer .services{
+    margin-top: -10px;
+    display: flex; /* pour aligner les éléments en ligne */
+    flex-wrap: wrap;
+    align-items: center;
+}
+footer .services .service{
+    margin-right: 30px;
+    padding: 10px;
+}
+footer .services .service p{
+    max-width: 300px;
+}
+
+
+.Main3{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo_main{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo_main .logo_content .logo_card{
+    display: flex;
+    
+}
+
+.logo_right{
+    margin-bottom: 0.0001pt;
+    line-height: normal;
+    text-align: justify;
+}
+
+.logo_main .logo_content .logo_card .logo_left img{
+    height: 200px;
+    width: 350px;
+    margin-top: 5px;
+}
+
+
+.main_expertise{
+    padding-left: 30px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_expertise .titre_expertise{
+    margin-top: 40px;
+}
+
+
+article{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    
+}
+
+
+
+.item-page {
+    margin-top: 10px;
+    padding-left: 30px;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+
+
+
+@media screen and (max-width:680px){
+    nav .onglets{
+        margin-left: 0px;
+        margin-bottom: 5px;
+    }
+}
